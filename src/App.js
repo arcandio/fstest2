@@ -1,0 +1,14 @@
+import React, { Component } from 'react'
+const { dialog } = require('electron').remote
+
+class App extends Component {
+	render() {
+		return (
+			<div>
+				Test
+			</div>
+		);
+	}
+}
+
+export default App
