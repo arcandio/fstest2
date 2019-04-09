@@ -27,4 +27,10 @@ I've called `const fs = window.require('fs');` in my react component, which I th
 
 I've also made sure to set `webPreferences.nodeIntegration` to true in my electron main process, to no avail.
 
+# Replication
+
+1. clone/download the project in windows
+2. run `npm run electron-dev`
+3. Observe error
+
 See my question here: https://stackoverflow.com/questions/55581152/how-do-i-use-use-dialogs-in-an-electron-react-environment
