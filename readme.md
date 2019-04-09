@@ -26,3 +26,5 @@ My goal is to have my desktop app able to save and load files to the user's mach
 I've called `const fs = window.require('fs');` in my react component, which I think I'm not supposed to do, but also, since this is in the actual `electron` module's `index.js`, I made sure that it also calls it, which it does: `var fs = require('fs')`. There was no change in behavior when I switched my call in the react component to `const fs = window.require('fs')`.
 
 I've also made sure to set `webPreferences.nodeIntegration` to true in my electron main process, to no avail.
+
+See my question here: https://stackoverflow.com/questions/55581152/how-do-i-use-use-dialogs-in-an-electron-react-environment
