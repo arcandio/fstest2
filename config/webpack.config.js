@@ -1,5 +1,7 @@
 'use strict';
-
+const options = {
+  target: 'electron-renderer'
+};
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
