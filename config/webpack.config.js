@@ -1,7 +1,4 @@
 'use strict';
-const options = {
-  target: 'electron-renderer'
-};
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
@@ -116,6 +113,7 @@ module.exports = function(webpackEnv) {
   };
 
   return {
+    target: 'electron-renderer',
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     // Stop compilation early in production
     bail: isEnvProduction,
@@ -589,17 +587,6 @@ module.exports = function(webpackEnv) {
           formatter: isEnvProduction ? typescriptFormatter : undefined,
         }),
     ].filter(Boolean),
-    // Some libraries import Node modules but don't use them in the browser.
-    // Tell Webpack to provide empty mocks for them so importing them works.
-    node: {
-      module: 'empty',
-      dgram: 'empty',
-      dns: 'mock',
-/*      fs: 'empty',*/
-      net: 'empty',
-      tls: 'empty',
-      child_process: 'empty',
-    },
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter
     performance: false,
